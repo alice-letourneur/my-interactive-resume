@@ -7,39 +7,42 @@
         <!-- Tells the browser what the title of this page should be. -->
         <title>Resume</title>
 
-        <!-- Load the page styles. -->
-        <link href="css/style.css" rel="stylesheet">
-
         <!-- <script> tag below add an interactive Google Map to my resume! -->
         <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDxciAsBjPz06hqmg2GJyv6WvFpWXa5EOY"></script> 
 
         <title>My resume - Alice Letourneur</title>
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Load the page styles. -->
+        <link href="css/style.css" rel="stylesheet">
         <!-- Font style-->
         <link href="https://fonts.googleapis.com/css?family=Lobster%7CRaleway:300" rel="stylesheet">
     </head>
     <body>
-        <div id="main">
-            <div id="header" class="center-content clear-fix">
+        <div id="main" class="container-fluid">
+            <div id="header" class="center-content clear-fix row">
                 <ul id="topContacts" class="flex-box"></ul>
             </div>
             <div style="clear: both;"></div>
-            <div id="workExperience" class="gray">
-                <h2>Work Experience</h2>
+            <div id="workExperience" class="gray row">
+                <h2 id="workExperience-header" class="col-xs-12 text-uppercase">Work Experience</h2>
             </div>
-            <div id="projects">
-                <h2>Projects</h2>
+            <div id="projects" class="row">
+                <h2 id="projects-header" class="col-xs-12 text-uppercase">Projects</h2>
             </div>
-            <div id="education" class="gray">
-                <h2>Education</h2>
+            <div id="education" class="gray row">
+                <h2 id="education-header" class="col-xs-12 text-uppercase">Education</h2>
             </div>
-            <div id="mapDiv">
-                <h2>Where I've Lived and Worked</h2>
+            <div id="mapDiv" class="row">
+                <h2 id="map-header" class="col-xs-12 text-uppercase">Where I've Lived and Worked</h2>
             </div>
-            <div id="lets-connect" class="dark-gray">
-                <h2 class="orange center-text">Let's Connect</h2>
-                <ul id="footerContacts" class="flex-box">
+            <div id="lets-connect" class="row">
+                <h2 id="lets-connect-header" class="orange center-text text-uppercase">Let's Connect</h2>
+                <ul id="footerContacts" class="flex-box list-inline text-center">
+                    <li><a class="social-icon" href="mailto:aliceletourneur@icloud.com"><img class="svg" alt="Clickable Logo email" src="images/mail_lighter.svg" onmouseover="this.src='images/mail_darker.svg';" onmouseout="this.src='images/mail_lighter.svg';"></a></li>
+                    <li><a class="social-icon" href="https://www.facebook.com/al.letourneur"><img class="svg" alt="Clickable Logo Facebook" src="images/facebook_lighter.svg" onmouseover="this.src='images/facebook_darker.svg';" onmouseout="this.src='images/facebook_lighter.svg';"></a></li>
+                    <li><a class="social-icon" href="https://uk.linkedin.com/in/alice-letourneur-51387944"><img class="svg" alt="Clickable Logo Linkedin" src="images/linkedin_lighter.svg" onmouseover="this.src='images/linkedin_darker.svg';" onmouseout="this.src='images/linkedin_lighter.svg';"></a></li>
+                    <li><a class="social-icon" href="https://github.com/alice-letourneur"><img class="svg" alt="Clickable Logo Github" src="images/github_lighter.svg" onmouseover="this.src='images/github_darker.svg';" onmouseout="this.src='images/github_lighter.svg';"></a></li>
                 </ul>
             </div>
         </div>
@@ -48,27 +51,30 @@
         <script src="js/helper.js"></script>
         <script src="js/resumeBuilder.js"></script>
         <script>
-          if(document.getElementsByClassName('flex-item').length === 0) {
+            if(document.getElementsByClassName('flex-item').length === 0) {
             document.getElementById('topContacts').style.display = 'none';
-          }
-          if(document.getElementsByTagName('h1').length === 0) {
+            }
+            if(document.getElementsByTagName('h1').length === 0) {
             document.getElementById('header').style.display = 'none';
-          }
-          if(document.getElementsByClassName('work-entry').length === 0) {
+            }
+            if(document.getElementsByClassName('work-entry').length === 0) {
             document.getElementById('workExperience').style.display = 'none';
-          }
-          if(document.getElementsByClassName('project-entry').length === 0) {
+            }
+            if(document.getElementsByClassName('project-entry').length === 0) {
             document.getElementById('projects').style.display = 'none';
-          }
-          if(document.getElementsByClassName('education-entry').length === 0) {
+            }
+            if(document.getElementsByClassName('education-entry').length === 0) {
             document.getElementById('education').style.display = 'none';
-          }
-          if(document.getElementsByClassName('flex-item').length === 0) {
+            }
+            if(document.getElementsByClassName('online-entry').length === 0) {
+            document.getElementById('online').style.display = 'none';
+            }
+            if(document.getElementsByClassName('flex-item').length === 0) {
             document.getElementById('lets-connect').style.display = 'none';
-          }
-          if(document.getElementById('map') === null) {
+            }
+            if(document.getElementById('map') === null) {
             document.getElementById('mapDiv').style.display = 'none';
-          }
+            }
         </script>
     </body>
 </html>

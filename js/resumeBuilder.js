@@ -8,7 +8,7 @@ var bio = {
 			"github": "alice-letourneur",
 			"location": "Brighton, UK"
 		},
-		"welcome_message": "Hi ! I'm Alice, a 25 yo Front-End Developer looking into  My description goes here. My description goes here. My description goes here. My description goes here. My description goes here. My description goes here. My description goes here. My description goes here. My description goes here. My description goes here. My description goes here.",
+		"welcome_message": "Hi ! I'm Alice, 25 yo Front-End Developer, if you are a company looking to hire a Front-End Developer in Brighton or London area, get in touch !",
 		"skills": [
 			"images/logo-html5.svg", "images/logo-css3.svg", "images/logo-bootstrap.svg", "images/logo-javascript.svg", "images/logo-jquery.svg", "images/logo-git.svg"
 		],
@@ -64,7 +64,7 @@ bio.display = function() {
 		formattedSkills = 
 			HTMLskills.replace("%data%", bio.header.skills[5]);
 		$("#skills").append(formattedSkills);
-	};
+	}
 };
 
 bio.display();
@@ -76,7 +76,7 @@ var work = {
 		"employer": "American Express",
 		"workdates": "2014 - now",
 		"worklocation": "Brighton, UK",
-		"workdescription" : "My main focus is to ensure operational alignment and readiness for new product launches, processes or system changes and card member communications. I’ll have to ensure that the changes won't impact customer satisfaction, won’t drive unnecessary call volumes, won’t increase call handling time metrics and that CCPs have all the information required to be able to provide the best customer service. I am partnering closely across lines of business to prevent defects, record them, facilitate their resolution."
+		"workdescription" : "Ensuring operational alignment and readiness for new product launches, processes or system changes and card member communications. I’ll have to ensure that the changes won't impact customer satisfaction, won’t drive unnecessary call volumes, won’t increase call handling time metrics and that CCPs have all the information required to be able to provide the best customer service. I am partnering closely across lines of business to prevent defects, record them, facilitate their resolution."
 	},
 	{
 		"jobtitle": "Global New Accounts Subject Matter Expert",
@@ -120,7 +120,7 @@ work.display = function() {
 		HTMLworkDescription.replace("%data%", work.jobs[jobs].workdescription);
 		
 		$(".thumbnail:last").append(formattedWorkDescription);
-	};
+	}
 };
 
 work.display();
@@ -164,8 +164,8 @@ project.display = function() {
 		var formattedProjectDescription =
 		HTMLprojectDescription.replace("%data%", project.projects[projects].projectdescription);
 
-		$(".thumbnail:last").append(formattedProjectDescription)
-	};
+		$(".thumbnail:last").append(formattedProjectDescription);
+	}
 };
 
 project.display();
@@ -190,7 +190,7 @@ var education = {
 	"onlineclass" : [
 		{
 			"onlineschool": "Udacity",
-			"onlinedates": "2016 - Today",
+			"onlinedates": "2016 - now",
 			"onlinetitle": "Front-End Development Nanodegree",
 			"onlinedescription": "Through a project-based approach combined with code reviews from professional developers, the program teaches the fundamentals of how the web works and provides a working knowledge of the three foundational languages that power each and every website: HTML, CSS and JavaScript. The program leads you to being job-ready for an entry-level job as a Front-End Web Developer. Skills developed: Responsive Web Design Fundamentals, Responsive Images, jQuery, Object-Oriented JavaScript, HTML5 Canvas, Browser Rendering and Website Performance Optimization, Chrome Dev Tools, MVC-MVVM, JavaScript Design Patterns, KnockOut.js, JavaScript testing with Jasmine, Version Control with Git and GitHub.",
 			"onlineurl" : "www.udacity.com"
@@ -229,10 +229,10 @@ education.display = function() {
 		HTMLschoolMajor.replace("%data%", education.schools[schools].schoolmajor);
 
 		$(".thumbnail:last").append(formattedSchoolMajor);
-	};
+	}
 		
 
-		for (onlineclasses in education.onlineclass) {
+    for (var onlineclasses = 0; onlineclasses < education.onlineclass.length; onlineclasses++) {
 		$("#education").append(HTMLonlineStart);
 		$(".online-entry:last").append(HTMLonlineClasses);
 		$(".online-entry:last").append(HTMLonlineClassesThumbnail);
@@ -253,7 +253,7 @@ education.display = function() {
 		HTMLonlineURL.replace("%data%", education.onlineclass[onlineclasses].onlineurl);
 
 		$(".thumbnail:last").append(formattedOnlineURL);
-	};
+	}
 };
 
 education.display();

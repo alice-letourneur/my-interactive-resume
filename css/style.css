@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin:0;
+  margin: 0;
   font-family: "Raleway", sans-serif;
   color: #f7ded4;
   list-style-type: none;
@@ -41,8 +41,8 @@ body {
 }
 
 #workExperience, #projects, #education, #online {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -57,7 +57,6 @@ h2 {
   font-size: 24px;
   line-height: 29px;
   padding: 3%;
-
 }
 
 h3 {
@@ -75,7 +74,6 @@ h4 {
   line-height: 17px;
 }
 
-
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -90,7 +88,6 @@ h4 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -133,7 +130,7 @@ a {
 
 .gray {
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 #header {
@@ -176,6 +173,8 @@ a {
   background-color: #282828;
   border: 0;
   margin-bottom: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .center-content {
@@ -211,25 +210,27 @@ span {
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
-  }
+  };
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
-  }
+  };
 }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
     margin-top: 10%;
   }
+
   .biopic {
     width: 150px;
   }
+
   .welcome-message {
     display: none;
-  }
+  };
 }
 
 #map {
@@ -253,11 +254,10 @@ span {
   padding-bottom: 5%;
 }
 
-
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
-  }
+  };
 }
 

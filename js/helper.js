@@ -34,7 +34,7 @@ var HTMLworkThumbnail = '<div class="thumbnail"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
-var HTMLworkLocation = '<div class="location-text"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>%data%</div>';
+var HTMLworkLocation = '<div class="location-text"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>%data%</div>';
 var HTMLworkDescription = '<p><br><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry col-xs-12 col-md-6"></div>';
@@ -49,7 +49,7 @@ var HTMLschoolThumbnail = '<div class="thumbnail"></div>';
 var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
-var HTMLschoolLocation = '<div class="location-text"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>%data%</div>';
+var HTMLschoolLocation = '<div class="location-text"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>%data%</div>';
 var HTMLschoolMajor = '<em><br><br>Major: %data%</em>';
 
 var HTMLonlineStart = '<div class="online-entry col-xs-12 col-md-6"></div>';

@@ -130,17 +130,17 @@ var project = {
 	{
 		"projecttitle": "Classic Arcade Game Clone",
 		"projectdate": "Ongoing",
-		"projectdescription" : "I have used HTML5 and CSS3 to develop a responsive website to display the portfolio projects I will build!"
+		"projectdescription" : "Currently developing an HTML5 Canvas powered video game using best practices in Object Oriented JavaScript."
 	},
 	{
 		"projecttitle": "My Online Resume",
 		"projectdate": "November 2016",
-		"projectdescription" : "Create an online resume using HTML5, CSS3, JavaScript, and jQuery."
+		"projectdescription" : "Built an online resume using HTML5, CSS3, JavaScript, and jQuery."
 	},
 	{
 		"projecttitle": "My Portfolio",
 		"projectdate": "October 2016",
-		"projectdescription" : "I have used HTML5 and CSS3 to develop a responsive website to display the portfolio projects I will build!"
+		"projectdescription" : "Built my first portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop."
 	}
 	]
 };

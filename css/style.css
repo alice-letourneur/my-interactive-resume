@@ -139,7 +139,7 @@ a {
 
 #name {
   font-family: 'Lobster', cursive;
-  font-size: 300%;
+  font-size: 290%;
   text-align: center;
   color: #e9967a;
 }
@@ -262,3 +262,6 @@ span {
   };
 }
 
+.licence {
+  padding-bottom: 0;
+}

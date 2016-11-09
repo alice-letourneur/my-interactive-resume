@@ -281,4 +281,4 @@ $(document).click(function(loc) {
 $("#mapDiv").append(googleMap);
 
 //Test with $(".gray").find("h2").addClass("dark-text"); is working
-$(".gm-style-").find("div").addClass("dark-text");
+$(".gm-style-iw").find("div").addClass("dark-text");

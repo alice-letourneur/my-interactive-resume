@@ -13,18 +13,18 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<p>%data%</p><hr>';
+var HTMLheaderRole = '<p class="light-pink">%data%</p><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text light-pink">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text light-pink">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text light-pink">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text light-pink">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text light-pink">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text light-pink">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text light-pink">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message center-text">%data%</span>';
+var HTMLwelcomeMsg = '<span class="welcome-message center-text light-pink">%data%</span>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3>';
 var HTMLskills = '<li class="flex-item"><img class="white-text logo-skills" src="%data%"></li>';
@@ -35,14 +35,14 @@ var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
 var HTMLworkLocation = '<div class="location-text"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>%data%</div>';
-var HTMLworkDescription = '<p><br><br>%data%</p>';
+var HTMLworkDescription = '<p class="light-pink"><br><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry col-xs-12 col-md-6"></div>';
 var HTMLprojectThumbnail = '<div class="thumbnail"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
-var HTMLprojectDescription = '<p><br><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectDescription = '<p class="light-pink"><br><br>%data%</p>';
+var HTMLprojectImage = '<img class="project-img" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry col-xs-12 col-md-6"></div>';
 var HTMLschoolThumbnail = '<div class="thumbnail"></div>';
@@ -50,7 +50,7 @@ var HTMLschoolName = '<a href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
 var HTMLschoolLocation = '<div class="location-text"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>%data%</div>';
-var HTMLschoolMajor = '<em><br><br>Major: %data%</em>';
+var HTMLschoolMajor = '<em class="light-pink"><br><br>Major: %data%</em>';
 
 var HTMLonlineStart = '<div class="online-entry col-xs-12 col-md-6"></div>';
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
@@ -58,7 +58,9 @@ var HTMLonlineClassesThumbnail = '<div class="thumbnail"></div>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>%data%</div>';
-var HTMLonlineURL = '<br><br><a href="#">%data%</a>';
+var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineDescription = '<p class="light-pink"><br><br>%data%</p>';
+
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map" class="col-xs-12"></div>';
@@ -132,14 +134,14 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.header.contacts.location);
+    locations.push(bio.contacts.location);
 
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     education.schools.forEach(function(school){
-      locations.push(school.schoollocation);
+      locations.push(school.location);
     });
 
     // iterates through work locations and appends each location to
@@ -147,7 +149,7 @@ function initializeMap() {
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     work.jobs.forEach(function(job){
-      locations.push(job.worklocation);
+      locations.push(job.location);
     });
 
     return locations;
@@ -181,9 +183,7 @@ function initializeMap() {
     });
 
     // hmmmm, I wonder what this is about...
-    // google.maps.event.addListener(marker, 'click', function() {
-    //   infoWindow.open(map, marker);
-    // });
+
 
     google.maps.event.addListener(marker, 'mouseover', function() {
     infoWindow.open(map, this);
@@ -192,6 +192,11 @@ function initializeMap() {
     google.maps.event.addListener(marker, 'mouseout', function() {
     infoWindow.close();
     });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infoWindow.open(map, marker);
+    });
+
     // this is where the pin actually gets added to the map.
     // bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));

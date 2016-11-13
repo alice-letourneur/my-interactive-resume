@@ -14,10 +14,6 @@ h6 {
   list-style-type: none;
 }
 
-body {
-  background-color: #fbeee9;
-}
-
 .clear-fix {
   overflow: auto;
 }
@@ -31,10 +27,16 @@ body {
 }
 
 .container-fluid {
-  max-width: 1000px;
   background: #222;
-  border-radius: 50px 15px;
   padding-top: 10px;
+}
+
+#workExperience-header,
+#projects-header,
+#education-header,
+#online-header,
+#map-header {
+  padding-left: 3%;
 }
 
 .education-entry,
@@ -185,6 +187,16 @@ a {
   padding-left: 10px;
 }
 
+
+@media only screen and (min-width:961px) {
+  .work-entry:nth-child(odd), 
+  .project-entry:nth-child(odd), 
+  .education-entry:nth-child(odd), 
+  .online-entry:nth-child(odd) {
+      padding-left: 0;
+  }
+}
+
 .center-content {
   padding: 2.5% 5%;
 }
@@ -206,6 +218,10 @@ img {
 
 span {
   padding: 5px;
+}
+
+#lets-connect-header {
+  padding: 15px;
 }
 
 #lets-connect {
@@ -278,6 +294,8 @@ span {
   padding-bottom: 0;
 }
 
-.gm-style {
-  color: #222!important;
+.back-homepage:hover {
+  text-decoration: none;
 }
+
+

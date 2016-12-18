@@ -171,6 +171,7 @@ var education = {
 		"location": "Caen, Lower Normandy, FRANCE",
 		"degree": "Bachelor",
 		"majors" : ["Foreign Languages (French, English, Italian, Spanish) with Economics & International Business"],
+		"link": "www.unicaen.fr",
 		"url" : "http://www.unicaen.fr/"
 	},
 	{
@@ -179,6 +180,7 @@ var education = {
 		"location": "Saint-Lô, Lower Normandy, FRANCE",
 		"degree": "Baccalaureate",
 		"majors" : ["Computer Science"],
+		"link": "pmcurie.etab.ac-caen.fr",
 		"url" : "http://pmcurie.etab.ac-caen.fr/"
 	}
 	],
@@ -188,7 +190,8 @@ var education = {
 			"dates": "2016 - now",
 			"title": "Front-End Development Nanodegree",
 			"description": "The program provides a working knowledge of the three foundational languages that power each and every website: HTML, CSS and JavaScript.",
-			"url" : "www.udacity.com"
+			"link": "www.udacity.com",
+			"url" : "https://www.udacity.com/"
 		}
 	]
 };
@@ -226,7 +229,7 @@ education.display = function() {
 		$(".thumbnail:last").append(formattedSchoolMajor);
 
 		var formattedSchoolURL = 
-		HTMLonlineURL.replace("%data%", education.schools[school].url);
+		HTMLonlineURL.replace("#", education.schools[school].url).replace("%data%", education.schools[school].link);
 		
 		$(".thumbnail:last").append(formattedSchoolURL);
 	}
@@ -256,7 +259,8 @@ education.display = function() {
 		$(".thumbnail:last").append(formattedOnlineDescription);
 
 		var formattedOnlineURL = 
-		HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
+		HTMLonlineURL.replace("#", education.onlineCourses[onlineCourse].url).replace("%data%", education.onlineCourses[onlineCourse].link);
+
 
 		$(".thumbnail:last").append(formattedOnlineURL);
 	}

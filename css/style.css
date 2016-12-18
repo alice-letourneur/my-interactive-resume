@@ -18,6 +18,16 @@ h6 {
   overflow: auto;
 }
 
+body {
+  max-width: 1300px;
+}
+
+@media only screen and (min-width : 1300px) {
+    body {
+        margin: 0 auto;
+    }
+}
+
 .col-xs-12 {
   padding-left: 30px;
 }

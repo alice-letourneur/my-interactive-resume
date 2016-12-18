@@ -7,7 +7,7 @@ var bio = {
 			"github": "alice-letourneur",
 			"location": "Brighton, UK"
 		},
-		"welcomeMessage": "Hi ! I'm Alice, 25 yo Front-End Developer, if you are a company looking to hire a Front-End Developer in Brighton or London area, get in touch !",
+		"welcomeMessage": "",
 		"skills": [
 			"images/logo-html5.svg", "images/logo-css3.svg", "images/logo-bootstrap.svg", "images/logo-javascript.svg", "images/logo-jquery.svg", "images/logo-git.svg"
 		],

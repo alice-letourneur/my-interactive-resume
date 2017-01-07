@@ -270,7 +270,7 @@ span {
 #map {
   display: block;
   height: 90%;
-  margin: 0;
+  width: 100%;
 }
 
 .svg {
@@ -280,7 +280,6 @@ span {
 
 .logo-skills {
   height: 70px;
-  width: 100px;
 }
 
 .project-img {
@@ -291,6 +290,7 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+  margin: 0;
 }
 
 @media only screen and (min-width: 750px) {
